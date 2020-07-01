@@ -1,0 +1,107 @@
+// fonts
+@font-face {
+    font-family: 'FREESCPT';
+    src: url('../fonts/FREESCPT.eot');
+    src: url('../fonts/FREESCPT.eot') format('embedded-opentype'),
+         url('../fonts/FREESCPT.woff2') format('woff2'),
+         url('../fonts/FREESCPT.woff') format('woff'),
+         url('../fonts/FREESCPT.ttf') format('truetype'),
+         url('../fonts/FREESCPT.svg#FREESCPT') format('svg');
+}
+
+// colors
+$textColor: #555;
+$colorSheme: #5363db;
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+// body styles
+body {
+    min-width: 320px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    color: $textColor;
+}
+section {
+    width: 100%;
+    padding: 100px 0;
+}
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+.col-6 {
+    width: 50%;
+    padding: 40px;
+}
+a {
+    line-height: 1.6;
+    display: inline-block;
+    text-decoration: none;
+    color: $textColor;
+    transition: color .5s;
+    &:hover {
+        color: $colorSheme;
+    }
+    &::after {
+        display: block;
+        content: "";
+        height: 2px;
+        width: 0%;
+        background-color: $colorSheme;
+        transition: width .5s ease-in-out;
+    }
+}
+a:hover:after,
+a:focus:after {
+    width: 100%;
+}
+
+// header
+header {
+    padding: 16px 0;
+    .container {    
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logo {
+        a {
+            &::after {
+                content: none;
+            }
+        }
+        img {
+            width: 70px;
+        }
+    }
+    .menu {
+        width: 470px;
+        .menu-box {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+// form-cta
+.form-cta {
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .form {
+        display: flex;
+        justify-content: flex-end;
+        form {
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
