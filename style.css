@@ -1,0 +1,275 @@
+@font-face {
+  font-family: 'FREESCPT';
+  src: url("../fonts/FREESCPT.eot");
+  src: url("../fonts/FREESCPT.eot") format("embedded-opentype"), url("../fonts/FREESCPT.woff2") format("woff2"), url("../fonts/FREESCPT.woff") format("woff"), url("../fonts/FREESCPT.ttf") format("truetype"), url("../fonts/FREESCPT.svg#FREESCPT") format("svg");
+}
+
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #555;
+}
+
+section {
+  width: 100%;
+  padding: 100px 0;
+}
+
+section .subtitle {
+  font-family: 'FREESCPT', serif;
+  font-size: 40px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.title-row {
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.col-6 {
+  width: 50%;
+  padding: 40px;
+}
+
+.col-6:only-child {
+  width: 100%;
+  text-align: center;
+}
+
+H1 {
+  font-size: 48px;
+  line-height: 72px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 45px;
+  text-transform: uppercase;
+  color: #5363db;
+}
+
+a {
+  line-height: 1.6;
+  display: inline-block;
+  text-decoration: none;
+  color: #555;
+  -webkit-transition: color .5s;
+  transition: color .5s;
+}
+
+a:hover {
+  color: #5363db;
+}
+
+a::after {
+  display: block;
+  content: "";
+  height: 2px;
+  width: 0%;
+  background-color: #5363db;
+  -webkit-transition: width .5s ease-in-out;
+  transition: width .5s ease-in-out;
+}
+
+a:hover:after,
+a:focus:after {
+  width: 100%;
+}
+
+.btn {
+  background: #5363db;
+  border: none;
+  border-radius: 10px;
+  width: 170px;
+  height: 50px;
+  color: #fff;
+}
+
+header {
+  padding: 16px 0;
+}
+
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .logo a::after {
+  content: none;
+}
+
+header .logo img {
+  width: 70px;
+}
+
+header .menu {
+  width: 470px;
+}
+
+header .menu .menu-box {
+  list-style: none;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.form-cta {
+  position: relative;
+  background: url(../img/bg-01.jpg) center center/cover no-repeat;
+}
+
+.form-cta::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: rgba(83, 99, 219, 0.8);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.form-cta .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.form-cta .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.form-cta .form form {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px 35px;
+}
+
+.form-cta .form form .form-group {
+  width: 100%;
+}
+
+.form-cta .form form .form-group input {
+  width: 100%;
+  height: 50px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 5px;
+  background: #f2f2f2;
+  padding: 0 10px;
+}
+
+.form-cta .form form .form-group input:focus {
+  outline: none;
+}
+
+.form-cta .form form .form-group select {
+  width: 100%;
+  height: 50px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 5px;
+  background: #f2f2f2;
+}
+
+.form-cta .form form .form-group select:focus {
+  outline: none;
+}
+
+.form-cta .form form .submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 25px;
+}
+
+.form-cta .cta {
+  color: #fff;
+}
+
+.about .row {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.about .classes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .classes img {
+  width: 100%;
+  max-width: 270px;
+}
+
+.about .classes .classes-info {
+  padding: 33px 20px;
+}
+/*# sourceMappingURL=style.css.map */
