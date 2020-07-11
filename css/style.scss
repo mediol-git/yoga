@@ -9,6 +9,16 @@
          url('../fonts/FREESCPT.svg#FREESCPT') format('svg');
 }
 
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans'), local('OpenSans'), 
+        url('../fonts/opensans.woff2') format('woff2'),
+        url('../fonts/opensans/opensans.woff') format('woff'),
+        url('../fonts/opensans/opensans.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
 // colors
 $textColor: #555;
 $colorSheme: #5363db;
@@ -90,11 +100,19 @@ a {
     width: 170px;
     height: 50px;
     color: $whiteText;
+    cursor: pointer;
+    position: relative;
+    transition: opacity .5s;
+    &:hover {
+        opacity: .85;
+    }
 }
 
 // header
 header {
     padding: 13px 0;
+    position: relative;
+    z-index: 3;
     .container {    
         display: flex;
         align-items: center;
@@ -124,7 +142,8 @@ header {
             }
         }
         &:checked ~ .menu-box {
-            right: 0;
+            transform: scaleY(1);
+            transform-origin: top;
         }
     }
     .menu-btn {
@@ -378,11 +397,23 @@ header {
             padding: 35px 0 20px;
         }
         a {
+            position: relative;
             &:last-child {
                 color: #999;
             }
             &::after {
-                content: none;
+                position: absolute;
+                display: flex;
+                content: "";
+                height: 2px;
+                width: 0%;
+                left: 0;
+                bottom: -5px;
+                background-color: $textColor;
+                transition: width .5s ease-in-out;
+            }
+            &:hover::after {
+                width: 45%;
             }
         }
     }
@@ -401,6 +432,7 @@ header {
         }
     }
     .about-slick {
+        padding: 0 15px;
         .slick-list {
             border-radius: 10px;
             box-shadow: 9px 9px 9px rgba(0,0,0,.1);
@@ -446,7 +478,7 @@ header {
 
 // elements
 .elements {
-    background: $colorSheme;
+    background: url(../img/bg-02.jpg) no-repeat;
     color: $whiteText;
     .elements-box {
         list-style: none;
@@ -558,6 +590,10 @@ header {
         border-radius: 20px;
         padding: 16px 0;
         width: 170px;
+        transition: opacity .5s;
+        &:hover {
+            opacity: .85;
+        }
     }
 }
 
@@ -570,6 +606,11 @@ footer {
         i {
             padding-right: 15px;
             font-size: 22px;
+            transition: transform .5s;
+            cursor: pointer;
+            &:hover {
+                transform: scale(1.2);
+            }
         }
         .row {
             width: 100%;
@@ -623,6 +664,10 @@ footer {
         }
         a {
             color: $whiteText;
+            transition: color .5s;
+            &:hover {
+                color: #cecece;
+            }
         }
     }
     .net-links {
@@ -632,6 +677,10 @@ footer {
         .net-links-box {
             display: flex;
             align-items: center;
+            transition: color .5s;
+            &:hover {
+                color: #cecece;
+            }
             &:first-child {
                 padding-bottom: 70px;
             }
@@ -684,13 +733,16 @@ footer {
         opacity: 1;
     }
     .menu .menu-box {
-        transition: right .5s;
+        transition: transform .5s;
         background: $whiteText;
         flex-direction: column;
         align-items: center;
         position: absolute;
+        left: 0;
         width: 100%;
-        right: -100%;
+        transform: scaleY(0);
+        transform-origin: top;
+        // top: -300%;
         top: 80px;
         z-index: 3;
     }
@@ -746,6 +798,20 @@ footer {
     }
 }
 @media (max-width: 570px) {
+    section, .about {
+        padding: 50px 0;
+    }
+    .col {
+        padding: 0;
+    }
+    h1 {
+        font-size: 36px;
+        line-height: 50px;
+    }
+    section .subtitle {
+        line-height: 1;
+        font-size: 28px;
+    }
     .programm .classes .classes-item {
         width: 100%;
     }
@@ -761,8 +827,17 @@ footer {
     .elements .elements-box .elements-item {
         width: 100%;
     }
+    footer {
+        padding: 50px 0 0;
+    }
     footer .contacts {
         flex-direction: column;
+    }
+    footer .top-footer .row {
+        padding-bottom: 50px;
+    }
+    footer .top-footer .social {
+        padding-bottom: 0;
     }
     footer .contacts .net-links {
         padding-top: 20px;
