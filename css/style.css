@@ -576,10 +576,6 @@ header .logo img {
           box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.1);
 }
 
-.about .about-slick .slick-slide img {
-  width: 100%;
-}
-
 .about .about-slick .slick-prev, .about .about-slick .slick-next {
   background: #fff;
   border-radius: 50%;
@@ -621,7 +617,7 @@ header .logo img {
 }
 
 .about .about-slick .single-item {
-  padding-top: 280px;
+  padding-top: 300px;
   background-size: cover;
   background-position: 50% 50%;
 }

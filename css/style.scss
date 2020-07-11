@@ -447,11 +447,6 @@ header {
             border-radius: 10px;
             box-shadow: 9px 9px 9px rgba(0,0,0,.1);
         }
-        .slick-slide {
-            img {
-                width: 100%;
-            }
-        }
         .slick-prev, .slick-next {
             background: $whiteText;
             border-radius: 50%;
@@ -484,7 +479,7 @@ header {
             }
         }
         .single-item {
-            padding-top: 280px;
+            padding-top: 300px;
             background-size: cover;
             background-position: 50% 50%;
         }
