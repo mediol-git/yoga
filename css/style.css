@@ -25,6 +25,12 @@ body {
   color: #555;
 }
 
+.wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
 section {
   width: 100%;
   padding: 100px 0;
@@ -408,6 +414,72 @@ header .logo img {
   padding-left: 15px;
 }
 
+.classes-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border-radius: 10px;
+  -webkit-box-shadow: 7px 7px 10px #cecece;
+          box-shadow: 7px 7px 10px #cecece;
+}
+
+.classes-inner .classes-img {
+  width: 50%;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+  padding-bottom: 47%;
+}
+
+.classes-inner .classes-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px 30px;
+  width: 50%;
+}
+
+.classes-inner .classes-info p {
+  padding: 35px 0 20px;
+}
+
+.classes-inner .classes-info a {
+  position: relative;
+}
+
+.classes-inner .classes-info a:last-child {
+  color: #999;
+}
+
+.classes-inner .classes-info a::after {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  content: "";
+  height: 2px;
+  width: 0%;
+  left: 0;
+  bottom: -5px;
+  background-color: #555;
+  -webkit-transition: width .5s ease-in-out;
+  transition: width .5s ease-in-out;
+}
+
+.classes-inner .classes-info a:hover::after {
+  width: 45%;
+}
+
 .gallery {
   padding: 0;
 }
@@ -475,65 +547,6 @@ header .logo img {
 .gallery-box .gallery-item img {
   width: 100%;
   height: 100%;
-}
-
-.classes-inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 10px;
-  -webkit-box-shadow: 7px 7px 10px #cecece;
-          box-shadow: 7px 7px 10px #cecece;
-}
-
-.classes-inner img {
-  width: 100%;
-  max-width: 270px;
-}
-
-.classes-inner .classes-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 20px 30px;
-}
-
-.classes-inner .classes-info p {
-  padding: 35px 0 20px;
-}
-
-.classes-inner .classes-info a {
-  position: relative;
-}
-
-.classes-inner .classes-info a:last-child {
-  color: #999;
-}
-
-.classes-inner .classes-info a::after {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  content: "";
-  height: 2px;
-  width: 0%;
-  left: 0;
-  bottom: -5px;
-  background-color: #555;
-  -webkit-transition: width .5s ease-in-out;
-  transition: width .5s ease-in-out;
-}
-
-.classes-inner .classes-info a:hover::after {
-  width: 45%;
 }
 
 .about {
@@ -607,9 +620,29 @@ header .logo img {
   margin-left: 15px;
 }
 
+.about .about-slick .single-item {
+  padding-top: 280px;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
 .elements {
-  background: url(../img/bg-02.jpg) no-repeat;
+  background: url(../img/bg-02.jpg) center center no-repeat;
+  background-size: cover;
+  position: relative;
   color: #fff;
+}
+
+.elements::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: rgba(83, 99, 219, 0.8);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 
 .elements .elements-box {
@@ -623,6 +656,8 @@ header .logo img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
+  z-index: 2;
 }
 
 .elements .elements-box .elements-item {
@@ -947,6 +982,12 @@ footer .copyright::before {
     width: calc(100% / 2);
     margin-bottom: 30px;
   }
+  footer .top-footer .row {
+    display: block;
+  }
+  footer .top-footer .col {
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1023,8 +1064,6 @@ footer .copyright::before {
     width: 100%;
   }
   footer .top-footer .row {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     padding-bottom: 100px;
   }
   footer .top-footer .col {
