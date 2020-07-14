@@ -433,6 +433,7 @@ header .logo img {
   width: 50%;
   background-repeat: no-repeat;
   background-position: left center;
+  border-radius: 10px 0 0 10px;
   background-size: cover;
   padding-bottom: 47%;
 }
