@@ -802,6 +802,10 @@ footer {
     .about .about-info {
         margin-bottom: 30px;
     }
+    .about .about-slick .slick-slider {
+        width: 95%;
+        margin: 0 auto;
+    }
     .elements .elements-box .elements-item {
         width: 50%;
     }
@@ -853,6 +857,9 @@ footer {
     }
     .classes-inner img {
         max-width: 200px;
+    }
+    .about .about-slick .single-item {
+        padding-top: 200px;
     }
     .elements .elements-box .elements-item {
         width: 100%;
