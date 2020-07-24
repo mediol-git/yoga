@@ -13,8 +13,8 @@
     font-family: 'Open Sans';
     src: local('Open Sans'), local('OpenSans'), 
         url('../fonts/opensans.woff2') format('woff2'),
-        url('../fonts/opensans/opensans.woff') format('woff'),
-        url('../fonts/opensans/opensans.ttf') format('truetype');
+        url('../fonts/opensans.woff') format('woff'),
+        url('../fonts/opensans.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
@@ -80,7 +80,7 @@ H1 {
     font-size: 48px;
     line-height: 72px;
     text-transform: uppercase;
-    margin-bottom: 43px;
+    margin-bottom: 20px;
 }
 h2 {
     font-size: 30px;
@@ -105,6 +105,8 @@ a {
     width: 170px;
     height: 50px;
     color: $whiteText;
+    font-size: 16px;
+    font-weight: 700;
     cursor: pointer;
     position: relative;
     transition: opacity .5s;
@@ -295,6 +297,7 @@ header {
         border: none;
         border-radius: 5px;
         background: $inputBg;
+        color: #797878;
         &:focus {
             outline: none;
         }
@@ -749,6 +752,7 @@ footer {
     }
     footer .top-footer .col {
         width: 100%;
+        padding: 0;
     }
 }
 @media (max-width: 768px) {
@@ -794,6 +798,13 @@ footer {
     .cta {
         text-align: center;
     }
+    .classes-inner {
+        flex-direction: column;
+    }
+    .classes-inner .classes-img,
+    .classes-inner .classes-info {
+        width: 100%;
+    }
     .gallery-box .gallery-item {
         width: 50%;
     }
@@ -815,9 +826,6 @@ footer {
     }
     footer .top-footer .row {
         padding-bottom: 100px;
-    }
-    footer .top-footer .col {
-        padding: 0;
     }
     footer .contacts .adress {
         padding: 20px 0;

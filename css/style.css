@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: 'Open Sans';
-  src: local("Open Sans"), local("OpenSans"), url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans/opensans.woff") format("woff"), url("../fonts/opensans/opensans.ttf") format("truetype");
+  src: local("Open Sans"), local("OpenSans"), url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff"), url("../fonts/opensans.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -80,7 +80,7 @@ H1 {
   font-size: 48px;
   line-height: 72px;
   text-transform: uppercase;
-  margin-bottom: 43px;
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -109,6 +109,8 @@ a {
   width: 170px;
   height: 50px;
   color: #fff;
+  font-size: 16px;
+  font-weight: 700;
   cursor: pointer;
   position: relative;
   -webkit-transition: opacity .5s;
@@ -369,6 +371,7 @@ header .logo img {
   border: none;
   border-radius: 5px;
   background: #f2f2f2;
+  color: #797878;
 }
 
 .form-group select:focus {
@@ -984,6 +987,7 @@ footer .copyright::before {
   }
   footer .top-footer .col {
     width: 100%;
+    padding: 0;
   }
 }
 
@@ -1042,6 +1046,16 @@ footer .copyright::before {
   .cta {
     text-align: center;
   }
+  .classes-inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .classes-inner .classes-img,
+  .classes-inner .classes-info {
+    width: 100%;
+  }
   .gallery-box .gallery-item {
     width: 50%;
   }
@@ -1066,9 +1080,6 @@ footer .copyright::before {
   }
   footer .top-footer .row {
     padding-bottom: 100px;
-  }
-  footer .top-footer .col {
-    padding: 0;
   }
   footer .contacts .adress {
     padding: 20px 0;
